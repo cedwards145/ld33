@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LD33", "LD33\LD33\LD33.cspr
 EndProject
 Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "LD33Content", "LD33\LD33Content\LD33Content.contentproj", "{57AE685A-497C-4848-AB86-561A4A60F49A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XNAGameLibrary", "XNAGameLibrary\XNAGameLibrary.csproj", "{06D43DFF-2BE0-4B9A-B79B-FE70FD4D0548}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,8 +21,15 @@ Global
 		{69B82F23-7E2E-4DC6-8712-2E41D5C5BF45}.Release|x86.Build.0 = Release|x86
 		{57AE685A-497C-4848-AB86-561A4A60F49A}.Debug|x86.ActiveCfg = Debug|x86
 		{57AE685A-497C-4848-AB86-561A4A60F49A}.Release|x86.ActiveCfg = Release|x86
+		{06D43DFF-2BE0-4B9A-B79B-FE70FD4D0548}.Debug|x86.ActiveCfg = Debug|x86
+		{06D43DFF-2BE0-4B9A-B79B-FE70FD4D0548}.Debug|x86.Build.0 = Debug|x86
+		{06D43DFF-2BE0-4B9A-B79B-FE70FD4D0548}.Release|x86.ActiveCfg = Release|x86
+		{06D43DFF-2BE0-4B9A-B79B-FE70FD4D0548}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
