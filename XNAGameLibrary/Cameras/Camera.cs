@@ -8,8 +8,8 @@ namespace XNAGameLibrary.Cameras
 {
     public class Camera
     {
-        private Point position;
-        public Point Position 
+        private Vector2 position;
+        public Vector2 Position 
         {
             get
             {
@@ -20,6 +20,8 @@ namespace XNAGameLibrary.Cameras
                 position = value;
             }
         }
+
+        public float MoveSpeed { get; set; }
 
         public float ZoomSpeed { get; set; }
         public float Zoom { get; set; }
@@ -35,7 +37,8 @@ namespace XNAGameLibrary.Cameras
         public Camera()
         {
             Zoom = 1;
-            ZoomSpeed = 0.05f;
+            ZoomSpeed = 0.02f;
+            MoveSpeed = 3f;
         }
 
         public void Move(Point moveValue)
@@ -45,8 +48,8 @@ namespace XNAGameLibrary.Cameras
 
         public void Move(int x, int y)
         {
-            position.X += x;
-            position.Y += y;
+            position.X += x * MoveSpeed;
+            position.Y += y * MoveSpeed;
         }
 
         public void ZoomIn()

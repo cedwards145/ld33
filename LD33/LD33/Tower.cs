@@ -14,6 +14,7 @@ namespace LD33
         protected Texture2D graphic;
         protected Map containingMap;
         protected int tileWidth = 0, tileHeight = 0;
+        protected float range;
 
         public Tower()
         {

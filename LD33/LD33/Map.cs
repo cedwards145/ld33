@@ -131,11 +131,13 @@ namespace LD33
 
                         if (currentTile.Gid != 0)
                         {
+                            if (layer == 1)
+                                Console.Write("");
                             // All tile ids are offset by 1
                             int tileId = currentTile.Gid - 1;
 
                             int column = tileId % (tileset.Width / tileWidth);
-                            int row = tileId / (tileset.Height / tileHeight);
+                            int row = tileId / (tileset.Width / tileWidth);
 
                             int x = (int)(tile % width) * tileWidth;
                             int y = (int)(tile / width * tileHeight);

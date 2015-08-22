@@ -32,10 +32,14 @@ namespace LD33
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferWidth = 1920;
+
             Content.RootDirectory = "Content";
             gameRef = this;
 
             camera = new Camera();
+            camera.Zoom = 1f;
         }
 
         protected override void Initialize()
@@ -53,13 +57,6 @@ namespace LD33
 
             // TODO: use this.Content to load your game content here
             map = new Map(@"content\maps\map1.tmx");
-            Tower tower = new Tower();
-            tower.setPosition(4, 4);
-            map.addTower(tower);
-
-            tower = new Tower();
-            tower.setPosition(6, 4);
-            map.addTower(tower);
         }
 
         protected override void Update(GameTime gameTime)
@@ -74,9 +71,6 @@ namespace LD33
             }
 
             updateCamera();
-
-            if (Input.IsMouseClicked())
-                map.spawnMinion();
 
             map.update();                
         }
